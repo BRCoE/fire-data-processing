@@ -10,7 +10,7 @@
 
 module load cdo
 cd /g/data/xc0/user/scortechini/github/fire-data-processing/deciles
-/g/data/xc0/software/conda-envs/rs3/bin/python zonalstats_update_rank_with_deciles.py -decfolder /g/data/ub8/au/FMC/intermediary_files/deciles_arrays -mosfolder /g/data/ub8/au/FMC/mosaics -var $var -ystart 2023 -yend 2023 -outfolder /g/data/ub8/au/FMC/stats -tmpfolder $PBS_JOBFS
+/g/data/xc0/software/conda-envs/rs3/bin/python zonalstats_update_rank_with_deciles.py -decfolder /g/data/ub8/au/FMC/intermediary_files/deciles_arrays -mosfolder /g/data/ub8/au/FMC/mosaics -var $var -ystart 2024 -yend 2024 -outfolder /g/data/ub8/au/FMC/stats -tmpfolder $PBS_JOBFS
 
 
 cd /g/data/xc0/user/scortechini/github/fire-data-processing/gadi_tasks/jobs_reports

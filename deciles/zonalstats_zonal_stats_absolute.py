@@ -137,7 +137,7 @@ if __name__ == '__main__':
     parser.add_argument('-tmpfolder', '--temporaryfolder', required=True, type=str, help="path to folder where to save temporary files")
     args = parser.parse_args()
 
-    # example for running script
+    # example for running script (it is recommended to run the script per single calendar year (i.e., same -ystart and -yend, such as -ystart 2001 -yend 2001) and then merge the yearly output files. This speeds up the process)
     # module load cdo
     # /g/data/xc0/software/conda-envs/rs3/bin/python zonalstats_zonal_stats_absolute.py -mosfolder /g/data/ub8/au/FMC/mosaics -vegmaskfolder /g/data/ub8/au/FMC/intermediary_files/vegetation_mask -areafolder /g/data/ub8/au/FMC/intermediary_files/areal_classifications -area both -var both -ystart 2001 -yend 2023 -outfolder /g/data/ub8/au/FMC/stats/zonal_stats -tmpfolder /g/data/ub8/au/FMC/tmp 
     
