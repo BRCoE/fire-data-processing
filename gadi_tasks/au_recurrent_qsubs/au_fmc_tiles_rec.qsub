@@ -2,16 +2,16 @@
 #PBS -P mr51
 #PBS -a 2010
 #PBS -q normal
-#PBS -l storage=gdata/xc0+gdata/u39+gdata/ub8
+#PBS -l storage=gdata/xc0+gdata/u39+gdata/ub8+gdata/wj98
 #PBS -l ncpus=1
 #PBS -l mem=4GB
 #PBS -l walltime=02:00:00
 #PBS -l jobfs=100GB
 
 module load cdo
-cd /g/data/xc0/user/scortechini/github/fire-data-processing/main_lfmc_flam
+cd /g/data/wj98/AFMS/github/fire-data-processing/main_lfmc_flam
 /g/data/xc0/software/conda-envs/rs3/bin/python update_fmc.py -d $year -t $tile -dst /g/data/ub8/au/FMC/tiles/fmc_c6_${year}_${tile}.nc -tmp $PBS_JOBFS
 
 
-cd /g/data/xc0/user/scortechini/github/fire-data-processing/gadi_tasks/jobs_reports
-qsub -v year=${year},tile=${tile} /g/data/xc0/user/scortechini/github/fire-data-processing/gadi_tasks/au_recurrent_qsubs/au_fmc_tiles_rec.qsub
+cd /g/data/wj98/AFMS/github/fire-data-processing/gadi_tasks/jobs_reports
+qsub -v year=${year},tile=${tile} /g/data/wj98/AFMS/fire-data-processing/gadi_tasks/au_recurrent_qsubs/au_fmc_tiles_rec.qsub
